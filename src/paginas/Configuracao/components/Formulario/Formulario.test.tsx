@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
+import { act } from "react-dom/test-utils";
 import { RecoilRoot } from "recoil";
 import { Formulario } from ".";
-import { act } from "react-dom/test-utils";
 
 test("Quando o input está vazio, novos participantes não podem ser adicionados", () => {
   render(

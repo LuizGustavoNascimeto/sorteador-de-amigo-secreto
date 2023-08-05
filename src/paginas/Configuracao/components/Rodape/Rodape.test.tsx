@@ -1,9 +1,9 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { RecoilRoot } from "recoil";
 import { Rodape } from ".";
-import { useListaParticipantes } from "../../state/hooks/useListaParticipantes";
+import { useListaParticipantes } from "state/hooks/useListaParticipantes";
 
-jest.mock("../../state/hooks/useListaParticipantes", () => {
+jest.mock("state/hooks/useListaParticipantes", () => {
   return {
     useListaParticipantes: jest.fn(),
   };
@@ -16,7 +16,7 @@ jest.mock("react-router-dom", () => {
     useNavigate: () => mockNavigacao,
   };
 });
-jest.mock("../../state/hooks/useSorteador", () => {
+jest.mock("state/hooks/useSorteador", () => {
   return {
     useSorteador: () => mockSorteio,
   };
